@@ -9,3 +9,4 @@ podman build --tag ripal-docker-demo-db -f DockerfileDB
 
 podman-compose up 
 ```
+4. Once the containers are up and running, use [test file](/test/test.http) in VS code to test the app.
