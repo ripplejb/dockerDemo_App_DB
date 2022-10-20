@@ -1,0 +1,17 @@
+version: '4.2'
+
+services:
+  db:
+    image: localhost/ripal-docker-demo-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - '5432:5432'
+  app:
+    image: localhost/ripal-docker-demo
+    ports:
+      - '8080:5000'
+    depends_on:
+      - db
+    
